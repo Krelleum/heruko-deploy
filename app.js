@@ -15,13 +15,13 @@ const imageRoute = require('./api/routes/imagesroute');
 //
 const path = require("path")
 // Connect to Mongo
-mongoose.connect('mongodb://TheMongoExpress:TheMongoExpress@ds251598.mlab.com:51598/mongoexpress', function (err) {
-
+mongoose.connect('mongodb://TheMongoExpress:TheMongoExpress@ds251598.mlab.com:51598/mongoexpress', err => {
 
 if (err) {
   return console.log('there was a problem' + err);
 }
 console.log('connected!');
+}
 );
 
 app.use(morgan('dev'));
