@@ -28,7 +28,7 @@ searchForPost(input){
     
         axios({
             method: 'get',
-            url: 'http://localhost:5000/createpost/search/' + search,
+            url: '/createpost/search/' + search,
         })
         .then(response => {
             this.setState({data: response.data});

@@ -17,7 +17,7 @@ class ShowCommentContainer extends Component{
  componentDidMount(){
     axios({
         method: 'get',
-        url:'http://localhost:5000/comment/getcomment/' + this.props.postId,
+        url:'/comment/getcomment/' + this.props.postId,
 
     })
     .then(response => {

@@ -28,7 +28,7 @@ getData(){
 
     axios({
         method: 'get',
-        url:'http://localhost:5000/user/' + userId,
+        url:'/user/' + userId,
         headers:{'Authorization': userKey}
 
     })
@@ -56,7 +56,7 @@ getPosts(){
     postIds.map(i => 
         axios({
             method: 'get',
-            url: 'http://localhost:5000/createpost/' + i,
+            url: '/createpost/' + i,
         })
         .then(response => {
             
@@ -86,7 +86,7 @@ deletePost(postToDelete, imagePath, imageId){
 // DELETES THE POSTID FROM CREATED POSTS ARRAY IN USERACCOUNT  
     axios({
         method: 'patch',
-        url: 'http://localhost:5000/user/deletepostid/' + userId ,
+        url: '/user/deletepostid/' + userId ,
         data: body,
         headers: { 'Authorization': sessionStorage.getItem('userkey')}
     })
@@ -114,7 +114,7 @@ deletePost(postToDelete, imagePath, imageId){
 
     axios({
         method: 'delete',
-        url: 'http://localhost:5000/image/delete',
+        url: '/image/delete',
         data: deletebody,
         headers:{
             'Content-Type':'application/json',
@@ -137,7 +137,7 @@ deletePost(postToDelete, imagePath, imageId){
     // DELETES ALL COMMENTS SUBMITTED TO THE POST
     axios({
         method: 'delete',
-        url: 'http://localhost:5000/comment/deletecomment/' + postToDelete,
+        url: '/comment/deletecomment/' + postToDelete,
         headers:
             {
                
@@ -156,7 +156,7 @@ deletePost(postToDelete, imagePath, imageId){
 // DELETES THE POST ITSELF
     axios({
         method:'delete',
-        url: 'http://localhost:5000/createpost/deletepost/' + postToDelete,
+        url: '/createpost/deletepost/' + postToDelete,
         headers:
             {
                 

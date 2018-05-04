@@ -14,7 +14,7 @@ class DeleteUser extends Component{
 
         axios({
             method: 'delete',
-            url: 'http://localhost:5000/user/delete/' + userId,
+            url: '/user/delete/' + userId,
             headers: { 'Authorization': sessionStorage.getItem('userkey') },
         })
             .then(response => {

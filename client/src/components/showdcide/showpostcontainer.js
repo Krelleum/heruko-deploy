@@ -64,7 +64,7 @@ renderOnScroll(offset){
     axios({
 
         method: 'get',
-        url: 'http://localhost:5000/createpost/offset/' + offset,
+        url: '/createpost/offset/' + offset,
     })
         .then((response) => {
             

@@ -34,7 +34,7 @@ handleSubmit(){
 
     axios({
         method: 'post',
-        url:'http://localhost:5000/user/signup',
+        url:'/user/signup',
         data: body,
         header: {'Content-Type': 'application/json'}
     })

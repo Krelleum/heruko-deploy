@@ -29,7 +29,7 @@ getData(){
 
     axios({
         method: 'get',
-        url: 'http://localhost:5000/user/' + userId,
+        url: '/user/' + userId,
         headers: {
             'Authorization': userKey,
         }
@@ -60,7 +60,7 @@ getPosts(){
     postIds.map(i => 
         axios({
             method: 'get',
-            url: 'http://localhost:5000/createpost/' + i,
+            url: '/createpost/' + i,
         })
         .then(response => {
             this.setState({ data: [...this.state.data, response.data]})

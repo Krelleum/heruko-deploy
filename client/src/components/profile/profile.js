@@ -26,7 +26,7 @@ componentDidMount(){
     
     axios({
         method : 'get', 
-        url: 'http://localhost:5000/user/' + userId,
+        url: '/user/' + userId,
         headers: { 'Authorization': userKey }
     })
     .then(response => {

@@ -38,7 +38,7 @@ onSend(){
 
     axios({
         method: 'post',
-        url: 'http://localhost:5000/comment/createcomment/' + this.props.postId,
+        url: '/comment/createcomment/' + this.props.postId,
         data: body,
         headers: { 'Authorization': sessionStorage.getItem('userkey')}
     })

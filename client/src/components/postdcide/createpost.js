@@ -71,7 +71,7 @@ class CreatePost extends Component {
 
             axios({
                 method: 'post',
-                url: 'http://localhost:5000/image',
+                url: '/image',
                 headers: 
                 { 
                     'Content-Type': 'multipart/form-data',
@@ -95,7 +95,7 @@ class CreatePost extends Component {
                         axios({
 
                             method: 'post',
-                            url: 'http://localhost:5000/createpost',
+                            url: '/createpost',
                             data: body,
                             headers:
                                 { 
@@ -140,7 +140,7 @@ class CreatePost extends Component {
             axios({
 
                 method: 'post',
-                url: 'http://localhost:5000/createpost',
+                url: '/createpost',
                 data: body,
                 headers:
                     { 
@@ -178,7 +178,7 @@ class CreatePost extends Component {
 
             axios({
                 method: 'patch',
-                url: 'http://localhost:5000/user/patchusercreated/' + userId,
+                url: '/user/patchusercreated/' + userId,
                 data: updateBody,
                 headers:
                     { 
