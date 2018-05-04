@@ -59,8 +59,8 @@ app.use((error, req, res, next) => {
 })
 
 
-app.get('/*', function(req, res){
-  res.sendFile('public/index.html');
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 module.exports = app;
