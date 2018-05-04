@@ -9,6 +9,11 @@ const userRoute = require('./api/routes/userroute');
 const commentRoute = require('./api/routes/commentsroute');
 const imageRoute = require('./api/routes/imagesroute');
 
+
+// Path from Mern Heroku Deploy Tutorial
+//
+//
+const path = require("path")
 // Connect to Mongo
 mongoose.connect('mongodb://TheMongoExpress:TheMongoExpress@ds251598.mlab.com:51598/mongoexpress');
 
@@ -30,8 +35,8 @@ app.use((req, res, next) => {
     }
     next();
 });
-
-
+// from Mern Heroku Deploy Tutorial
+app.use(express.static(path.join(__dirname, "client", "build")))
 // MIDDLEWARE ---- alle Requests müssen durch eine Middlewarefunktion. Sobald ein Request reinkommt
 // kann ich hier eine Response zurücksenden. Ich kann den Request aber auch in der Funktion bearbeiten
 // Registrierung der Routen!
