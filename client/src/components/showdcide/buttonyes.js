@@ -26,7 +26,7 @@ handleClick(){
     axios({
 
         method: 'patch',
-        url: "http://localhost:5000/createpost/" + this.props.id +"/yes",
+        url: "/createpost/" + this.props.id +"/yes",
         data: body,
         headers:
             {

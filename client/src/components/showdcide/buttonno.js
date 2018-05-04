@@ -13,7 +13,7 @@ class ButtonNo extends Component {
         axios({
 
             method: 'patch',
-            url: "http://localhost:5000/createpost/" + this.props.id + "/no",
+            url: "/createpost/" + this.props.id + "/no",
             data: body,
             headers:
                 {

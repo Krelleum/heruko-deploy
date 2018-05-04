@@ -27,7 +27,7 @@ componentWillMount(){
     axios({
 
         method: 'get',
-        url: 'http://localhost:5000/createpost'
+        url: '/createpost'
      })
         .then((response) => {
            

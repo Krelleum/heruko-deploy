@@ -22,7 +22,7 @@ setTimeout(
         axios({
 
             method: 'get',
-            url: 'http://localhost:5000/createpost/' + this.props.id,
+            url: '/createpost/' + this.props.id,
         })
             .then((response) => {
                
