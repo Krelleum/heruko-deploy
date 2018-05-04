@@ -42,7 +42,7 @@ componentWillMount(){
     axios({
         
         method: 'post',
-        url: 'http://localhost:5000/user/verify',
+        url: '/user/verify',
         data: token,
         header: { 'Content-Type': 'application/json' }
         
