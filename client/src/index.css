@@ -1,0 +1,52 @@
+:root{
+  --backgroundgradient: linear-gradient(to bottom, #ff4e50, #f9d423);
+  /* --backgroundgradient: linear-gradient(to bottom, #00B7FF, #29ABE2); */
+  /* --bluegradient: linear-gradient(to right, #0cebeb9c, #20e3b2, #29ffc6); */
+  /* --bluegradient: linear-gradient(to right, rgba(244,103,110,1) 0%, rgba(245,141,97,1) 50%, rgba(244,103,110,1) 100%); */
+  --bluegradient: linear-gradient(to right, #06beb6, #48b1bf);
+  --bluegradientlight: linear-gradient(to right, #e0fdfd, #e1fff7, #f2fffc);
+  --gradienttowhite: linear-gradient(to bottom, #ff4e50,#FAFAFA);
+  --bordergradient: linear-gradient(to left, #ff4e50, #f9d423);
+  --greengradient: #16DB93;
+  --redgradient:#EE6352;
+
+  --oldgreengradient: linear-gradient(to right, #56ab2f, #a8e063);
+  --oldredgradient:linear-gradient(to right, #eb3349, #f45c43);
+
+
+  --highlight: #FF3366;
+
+
+  --orangegradient:linear-gradient(to right, #f7971e, #ffd200);
+  --transparentwhite: rgba(255,255,255, 0.4);
+  --transparentblack: rgba(0,0,0, 0.4);
+  /* fonts */
+  --primaryfont: white;
+  --secondaryfont: rgba(0,0,0, 0.3);
+  --darkgreengrey:#202A25;
+  --lightgrey:#A3A9AA;
+  --fontgrey:#475B5A;
+  /* border */
+--primaryred: #ff4e50;
+--primaryyello:#f9d423;
+--orange:#EE6352;
+--turkis:#16DB93;
+
+/* Shadow */
+
+--shadowinset: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23);
+--shadow1: 0 3px 6px rgba(0,0,0,0.16),  0 3px 6px rgba(0,0,0,0.23);
+
+}
+
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Tajawal;
+  /* background: var(--backgroundgradient); */
+  background: var(--bluegradient);
+  background-size: contain;
+  min-height: 1000px;
+}

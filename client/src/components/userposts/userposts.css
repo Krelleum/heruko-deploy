@@ -1,0 +1,150 @@
+.userpostcontainer{
+    padding-top: 70px;
+    
+}
+.userpostwrapper{
+    display: inline-block;
+}
+
+.userpost{
+    background: white;
+   
+    margin-top: 20px;
+    min-height: 250px;
+    display: inline-block;
+    padding: 0px;
+    padding-bottom:0px;
+    overflow: hidden;
+    
+    
+    
+    font-family: roboto;
+}
+
+.userpostresult{
+    
+    color: white;
+    font-size: 1.2rem;
+    
+    font-family: roboto;
+    display: inline-block;
+    padding:0px;
+    letter-spacing: -1px;
+}
+
+.userresultshow{
+    /* box-shadow: var(--shadow1); */
+   height: 30px;
+    width: 100%;
+    
+}
+
+
+.userresultyes{
+    background:var(--greengradient);
+    
+   
+}
+
+.userresultno{
+    background: var(--redgradient);
+}
+.userresulttie{
+    background: var(--orangegradient);
+}
+.userresultheading{
+    float: left;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+    padding-top: 5px;
+    color: rgba(255,255,255, 0.7)
+}
+
+
+.userpostheading{
+    padding: 0px;
+    color:rgba(0,0,0, 0.05);
+    margin-top: 0px;
+}
+.userpostleft{
+    
+    float:left;
+    overflow: scroll;
+    
+    border-bottom: 1px solid rgba(0,0,0, 0.05);
+    font-weight: 600;
+    text-align: center;
+    
+    padding: 15px;
+    padding-bottom: 0px;
+    
+}
+
+
+.userpostleft::-webkit-scrollbar{
+    display:none;
+    
+}
+.userpostcenter{
+    border-right: 1px solid rgba(0,0,0, 0.05);
+    display: inline-block;
+    
+   
+   
+    
+}
+.userpostright{
+    display: inline-block;
+    max-height: 100px;
+    padding-top: 20px;
+    
+    
+}
+
+
+.userpostposres{
+    display: inline-block;
+    color: green;
+    width: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.userpostnegres{
+    display: inline-block;
+    margin-left: 50px;
+    color: red;
+    width: 50px;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.userpostright button {
+    border:none;
+    border:1px solid var(--primaryred);
+    color:var(--primaryred);
+    background:white ;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.userpostcommentwrapper{
+    clear: both;
+    
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+#userpostcommentbtn{
+    color: rgba(0,0,0, 0.2);
+    font-size: 0.8rem;
+    margin: 0px;
+    text-align: center;
+}
+
+.userpostcomment{
+    margin-top: 15px;
+}

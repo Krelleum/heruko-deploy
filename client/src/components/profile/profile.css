@@ -1,0 +1,74 @@
+.profilecontainer{
+    /* background: white; */
+    color: black;
+    font-family: roboto;
+    min-height: 550px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-top: 15px;
+    
+    
+    
+}
+
+
+
+
+
+.profilepicture{
+   float: left;
+    height: 500px;
+    
+    
+    text-align: center;
+     /* background: var(--backgroundgradient); */
+     background: rgba(255,255,255, 0.5);
+}
+
+.profilepicture p{
+    padding-top: 75px; 
+    color: white;
+    font-size: 4rem;
+    font-family: roboto;
+    font-weight: 600;
+    
+}
+
+
+.profileusersettingsheading{
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.profileusersettings{
+    display: inline-block;
+    /* background: white; */
+  
+    
+    height: 500px;
+}
+
+
+
+
+
+.profileusersetting{
+    display: inline-block;
+    
+    height: 150px;
+    padding-top: 20px;
+    color: white;
+}
+
+.profileusersetting:hover{
+    background: rgba(255,255,255, 0.5);
+   color: white;
+   border-radius: 10px;
+}
+
+.profileusersetting h2{
+    font-size: 1.4rem;
+
+}

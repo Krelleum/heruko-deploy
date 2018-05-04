@@ -1,0 +1,15 @@
+.signupwrapper{
+    display: inline-block;
+    background:white;
+    height: 300px;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+.signupheading{
+    margin-top: 20px;
+}
+
+.signup input{
+   background: #d4d4d4;
+}

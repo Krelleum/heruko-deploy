@@ -1,0 +1,37 @@
+
+
+.infoboxloggedout{
+    background: #FF3366;
+    width: 290px;
+    margin-left: -10px;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.infoboxloggedout span{
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.infoboxloggedin{
+    background: white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+}
+
+.infoboxpoint{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background: var(--greengradient);
+    border-radius: 50%;
+    margin-right: 5px;
+    
+}
+.infoboxname{
+    padding-top: 2px;
+    display: inline-block;
+}

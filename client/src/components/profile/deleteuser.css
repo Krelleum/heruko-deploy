@@ -1,0 +1,9 @@
+.deleteuseraccount p{
+    display: inline-block;
+}
+
+
+
+#deleteuserclosebutton{
+    float: right;
+}

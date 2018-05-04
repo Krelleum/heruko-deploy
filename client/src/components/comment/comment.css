@@ -1,0 +1,87 @@
+.commentcontainer{
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+   
+}
+
+
+#commentcontainerbutton{
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: rgba(0,0,0, 0.3); 
+}
+#commentcontainerbutton:hover {
+    color: black;
+}
+
+.createcommentheading{
+    font-size: 0.9rem;
+}
+#createcommentfield{
+    width: 100%;
+    box-shadow: var(--shadowinset);
+    margin-bottom: 0px;
+    font-size: 1rem;
+    padding: 5px;
+}
+#createcommentfield:focus{
+    border:none;
+    outline:none;
+}
+
+
+.createcommentbutton{
+    padding: 0px;
+}
+.createcommentbutton button{
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: white;
+}
+
+.createcommentbutton:hover > button{
+    background: #FF3366;
+    color:white;
+}
+
+.showcommentwrapper{
+     max-height: 250px;
+    overflow: scroll;
+}
+
+.showcommentwrapper::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+
+.showcomment{
+    box-shadow: var(--shadow1);
+    border-left: 2px solid var(--primaryred);
+    padding:5px;
+    padding-left: 20px;
+    margin-top: 5px;
+    background: white;   
+    
+}
+
+.showcommentauthor{
+    margin-bottom: 0px;
+    padding:0px;
+    font-size: 0.8rem;
+    color:rgba(0,0,0, 0.3);
+}
+
+.showcommentauthor p{
+    margin: 0px;
+}
+
+.showcommenttext{
+    font-size: 1rem;
+    font-weight: 400;
+    
+}
