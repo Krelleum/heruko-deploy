@@ -33,38 +33,38 @@ const upload = multer({storage: storage});
 
 
 router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
-    
-   
+
+
     sharp(req.file.path)
         .resize(300)
         .max()
         .jpeg({quality: 90})
         .toBuffer(function (err, buffer) {
-            fs.writeFile('./uploads/' + req.file.originalname, buffer, function(err){})
+            fs.writeFile('/tmp/' + req.file.originalname, buffer, function(err){})
             // output.jpg is a 300 pixels wide and 200 pixels high image
             // containing a scaled and cropped version of input.jpg
         })
-        
 
-    
+
+
 
     const createImage = new Image({
         _id: new mongoose.Types.ObjectId(),
         image: req.file.path,
-        
+
     });
 
 
 createImage.save()
 
-    
+
 
     .then(result => {
         res.status(201).json({
             result: result,
             message: 'Image Created'
         })
-        
+
     })
     .catch(err => {
         res.status(500).json({error: err});
@@ -90,12 +90,12 @@ router.delete('/delete', checkAuth, (req, res, next) => {
             message: 'unable to delete Image'
         })
     });
-    
+
 // Handles Delete from Disk via FileSystem(FS)
     fs.unlink(req.body.imagePath, () => {
         return null
     })
-        
+
 });
 
 
