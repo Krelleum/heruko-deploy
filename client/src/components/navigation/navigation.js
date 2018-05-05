@@ -31,7 +31,7 @@ class Navbar extends Component {
             return (
                 <div className="navbar-nav">
 
-                    <a className="nav-item nav-link active">
+                    <a className="nav-item nav-link active" data-toggle="collapse" data-target="#navbarNavAltMarkup">
                         <div onClick={this.props.toggleFeed} className='Feedbutton navbutton'>
                             <p>Feed</p>
                         </div> <span className="sr-only">(current)</span>
@@ -40,18 +40,18 @@ class Navbar extends Component {
 
 
 
-                    <a className="nav-item nav-link" >
+                    <a className="nav-item nav-link" data-toggle="collapse" data-target="#navbarNavAltMarkup">
                         <div onClick={this.props.toggleProfile} className='profilebutton navbutton'>
                             <p>My Profile</p>
                         </div>
                     </a>
 
-                    <a className="nav-item nav-link" >
+                    <a className="nav-item nav-link" data-toggle="collapse" data-target="#navbarNavAltMarkup" >
                         <div onClick={this.props.toggleUserPost} className='userpostsbutton navbutton'>
                             <p>My Posts</p>
                         </div>
                     </a>
-                    <a className="nav-item nav-link" >
+                    <a className="nav-item nav-link"  data-toggle="collapse" data-target="#navbarNavAltMarkup">
                         <div onClick={this.props.toggleVotedPost} className='userpostsbutton navbutton'>
                             <p>My Votes</p>
                         </div>
@@ -60,7 +60,7 @@ class Navbar extends Component {
 
 
 
-                    <a className="nav-item nav-link" >
+                    <a className="nav-item nav-link" data-toggle="collapse" data-target="#navbarNavAltMarkup">
                         <div className='logout navbutton'>
                             <p onClick={this.logout.bind(this)}>{existingToken ? 'Logout' : 'Login'}</p>
                         </div>
