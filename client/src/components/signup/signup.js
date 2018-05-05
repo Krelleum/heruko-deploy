@@ -11,10 +11,10 @@ class SignUp extends Component{
         }
     }
 
-    
+
 handleChange(e){
     e.preventDefault();
-    
+
     const property = e.target.id;
     const value = e.target.value
 
@@ -40,10 +40,10 @@ handleSubmit(){
     })
     .then(response =>{
         console.log(response.status);
-            
+
         this.setState({ status: 'Konto Erstellt!'});
-       
-            
+
+
         })
     .catch(error =>{
         console.log(error);
@@ -57,19 +57,19 @@ handleSubmit(){
 render(){
     return(
         <div className='signupwrapper col-md-12'>
-            
+
             <div className='signupheading'>
-            <p>Registrieren</p>
-            </div>     
-            
+            <p>Sign Up</p>
+            </div>
+
             <div className='signup'>
             <form>
-                    <input className='signinput' id='signupuser' placeholder='Username' onChange={this.handleChange.bind(this)} ></input>
+                    
                 <input className='signinput' id='signupemail' placeholder='Email' onChange={this.handleChange.bind(this)} ></input>
-                    <input className='signinput' id='signuppassword' type='password' placeholder='Passwort' onChange={this.handleChange.bind(this)}></input> 
+                    <input className='signinput' id='signuppassword' type='password' placeholder='Passwort' onChange={this.handleChange.bind(this)}></input>
                     <div className='signplaceholder'><p>{this.state.status}</p></div>
                     <button onClick={this.handleSubmit.bind(this)} className='signinputbtn'  type='button'>Sign Up</button>
-            </form>       
+            </form>
             </div>
 
          </div>
