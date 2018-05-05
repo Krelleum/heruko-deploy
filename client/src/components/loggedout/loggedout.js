@@ -17,7 +17,7 @@ changeSignUp(){
     this.setState({
         show: 'signUp'
     })
-}    
+}
 
 changeSignIn(){
     this.setState({
@@ -50,34 +50,35 @@ render(){
             <div className='container'>
             <div className='col-md-6 loggedoutheading'>
                 <h3>FEEDBCK</h3>
-                <p>Crowd-Based-Decisionmaking - Sounds Smart .. is Stupid !</p>
+                <p>Crowd-Based-Decisionmaking</p>
+                <p>Got a Decision to make? - The Crowd will help you to decide. Create an Account today and enjoy Crowd-Based-Decisionmaking on FEEDBCK</p>  
             </div>
-            
-        
+
+
         <div className='col-md-6 loggedoutlogin'>
-       
-        
-               
+
+
+
 
             <div className='col-md-8 loggedout'>
                 <div className='loggedoutbuttons'>
                     <div className='loggoutbuttonsignup' onClick={this.changeSignUp.bind(this)}>
-                        <p>Registrieren</p>
+                        <p>Sign Up</p>
                     </div>
                         <div className='loggoutbuttonsignin' onClick={this.changeSignIn.bind(this)}>
-                        <p>Einloggen</p>
+                        <p>Sign In</p>
                     </div>
                 </div>
                 {this.toRender()}
-            
-               
-            
-            
+
+
+
+
             </div>
-                </div>      
-           
+                </div>
+
         </div>
-        </div> 
+        </div>
     )
 }
 

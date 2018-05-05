@@ -17,10 +17,10 @@ class ShowPost extends Component {
 
     // ****************************************************************
     // handleStateChange() is passed as a Prop to the <ButtonYes/>
-    // and <ButtonNo/> Component. As soon as one of the Buttons 
+    // and <ButtonNo/> Component. As soon as one of the Buttons
     // is clicked the function is triggered and this.state.showStats
     // will be changed to true...
-    // 
+    //
     // ... resulting in showButtons() else Statement will be executed
     // rendering the <ShowStats/> Component
     // *****************************************************************
@@ -35,14 +35,14 @@ class ShowPost extends Component {
 
     // *****************************************************************
     // showButtons() decides if the Votebuttons get rendered.
-    // It gets the UserId from localStorage and Checks if 
+    // It gets the UserId from localStorage and Checks if
     // the  votedBy Array includes the  UserID (let isIncluded).
-    // 
-    // If the UserId is not Included and this.state.showStats is 
+    //
+    // If the UserId is not Included and this.state.showStats is
     // false, the Function returns a div containing <ButtonYes/> and
     // <ButtonNo/> Component...
-    // 
-    // 
+    //
+    //
     // If the UserId is included the <Showstats/> Component is returned!
     // ******************************************************************
 
@@ -62,8 +62,8 @@ class ShowPost extends Component {
             )
         }
         else {
-                return <ShowStats id={this.props._id} />   
-           
+                return <ShowStats id={this.props._id} />
+
         }
 
 
@@ -73,7 +73,7 @@ class ShowPost extends Component {
 
 
     // *****************************************************
-    // createTime() recieves the Timestamp from DB as props. 
+    // createTime() recieves the Timestamp from DB as props.
     // let newDate stores the current time in a variable in
     // order to compare Current Time and the Time the Post was
     // created.
@@ -94,12 +94,12 @@ class ShowPost extends Component {
             var days = (hours / 24).toFixed(0);
 
             if (hours < 1) {
-                return minutes + ' Minuten';
+                return minutes + ' Minutes';
             }
             else if (hours >= 24) {
-                return days + ' Tagen'
+                return days + ' Days'
             } else {
-                return hours + ' Stunden';
+                return hours + ' Hours';
             }
         }
     }
@@ -119,23 +119,23 @@ class ShowPost extends Component {
 
 
         return (
-            
+
             <div className="col-md-5 actualpost" >
                 {this.renderImage()}
                 <div className='actualpostheader'>
                     <div className='postheaderleft'>
-                        
+
                         <p>@{this.props.author}</p>
                     </div>
 
                     <div className='postheaderright'>
                         <p id='votedbylength'>{this.props.votedBy.length} Votes </p>
-                        <p>vor {this.createTime()}</p>
+                        <p>{this.createTime()} ago</p>
 
                     </div>
                 </div>
 
-                
+
 
                 <div className='posttext'>
                     <p>{this.props.post}</p>
@@ -150,7 +150,7 @@ class ShowPost extends Component {
                     author={this.props.author}
                 />
             </div>
-            
+
         );
     }
 }

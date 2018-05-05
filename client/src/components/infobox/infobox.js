@@ -22,7 +22,7 @@ renderBox(){
             </div>
 
             <div className='infoboxname'>
-                <p>Eingeloggt als {userName} </p>
+                <p>Logged In as {userName} </p>
             </div>
          </div>
         )

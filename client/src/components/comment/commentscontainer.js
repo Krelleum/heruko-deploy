@@ -17,7 +17,7 @@ class CommentContainer extends Component {
 
 
 toggleComments(){
-    
+
     if(this.state.show === false){
         this.setState({
             show: true
@@ -46,7 +46,7 @@ showComments(){
             <div>
                 <CreateComment postId={this.props.postId} author={this.props.author} updateCommentByParent={this.updateCommentsByChild.bind(this)}/>
                 <ShowCommentContainer postId={this.props.postId} />
-            </div>    
+            </div>
         )
     }else {
         return null
@@ -57,14 +57,14 @@ showComments(){
 
 
 render(){
-   
+
     return(
         <div>
-           <div className='commentcontainer'> 
-           <p id='commentcontainerbutton' onClick={this.toggleComments.bind(this)}>Kommentare</p> 
+           <div className='commentcontainer'>
+           <p id='commentcontainerbutton' onClick={this.toggleComments.bind(this)}>Comments</p> 
            <div className='commentcontainerextend'>
                 {this.showComments()}
-           </div> 
+           </div>
            </div>
         </div>
     )

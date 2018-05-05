@@ -41,24 +41,24 @@ class CreatePost extends Component {
 
     //************************************************************************************
     // Handle Submit *most Complicated Function*
-    // 
+    //
     // Const file : Loads the imagefile itself as a Form-Data-Object from state.
-    // (the Imagefile was received by the ImageUploader with Method recieveFile()) 
-    // 
+    // (the Imagefile was received by the ImageUploader with Method recieveFile())
+    //
     // Case 1 -If file exists (User clicked on Add Image and did choose an Image to upload)
     //         Post Image via axios to Multer-Single-Upload Endpoint. Image is posted as data:file
     //         After File is send the nested Axios call will send the actual Post Text from this.state.Post
     //         Important - the ImagePath is recieved as a promise in first .then call (result.data.result.image)
     //         and send as the var Body imagePath property(string).
-    //         
+    //
     //          Afterwards updateUser() is called with PostId as an Argument. UpdateUser() will
     //          patch the User in DB according to Userid in localStorage and add the received PostId to
-    //          createdPosts Array 
-    //          
+    //          createdPosts Array
+    //
     // Case 2 - File does not exist.(User only Typed Text in Textfield without Image upload)
     //          The if statements first Block will be ignored and the Else block triggers wich skips
     //          uploading via Multer Endpoint and storing the ImagePath in Post Object in DB.
-    // 
+    //
     // *********************************************************************************************************
 
     handleSubmit() {
@@ -72,8 +72,8 @@ class CreatePost extends Component {
             axios({
                 method: 'post',
                 url: '/image',
-                headers: 
-                { 
+                headers:
+                {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': sessionStorage.getItem('userkey'),
                 },
@@ -91,16 +91,16 @@ class CreatePost extends Component {
                             imagePath: result.data.result.image,
                             imageId: result.data.result._id,
                         }
-                        
+
                         axios({
 
                             method: 'post',
                             url: '/createpost',
                             data: body,
                             headers:
-                                { 
+                                {
                                     'Content-Type': 'application/json',
-                                    'Authorization': sessionStorage.getItem('userkey'),  
+                                    'Authorization': sessionStorage.getItem('userkey'),
                                 }
 
                         })
@@ -113,10 +113,10 @@ class CreatePost extends Component {
                             })
 
                             .catch(function (error) {
-                                
+
                                 console.log(error);
                             });
-                    
+
                 })
                 .catch(err => {
                     this.setUnauthorized()
@@ -143,7 +143,7 @@ class CreatePost extends Component {
                 url: '/createpost',
                 data: body,
                 headers:
-                    { 
+                    {
                         'Content-Type': 'application/json',
                         'Authorization': sessionStorage.getItem('userkey'),
                 }
@@ -157,8 +157,8 @@ class CreatePost extends Component {
 
                 })
                 .catch(error => {
-    
-                    
+
+
                     this.setUnauthorized()
                     console.log(error);
                 });
@@ -181,7 +181,7 @@ class CreatePost extends Component {
                 url: '/user/patchusercreated/' + userId,
                 data: updateBody,
                 headers:
-                    { 
+                    {
                         'Content-Type': 'application/json',
                         'Authorization': sessionStorage.getItem('userkey'),
                     }
@@ -221,10 +221,10 @@ class CreatePost extends Component {
                     <div className='col-md-12 createpost'>
                         <form>
                             <h4>Get Feedback!</h4>
-                            <p>Stelle deine Frage und lass sie von der Crowd beantworten!</p>
+                            <p>Post your Question and let the Crowd decide!</p>
 
-                            <textarea placeholder='Soll ich heute Feiern gehen?' maxLength="150" autoFocus='true' id='createposttextfield' onChange={this.handleChange.bind(this)}></textarea><br></br>
-                            
+                            <textarea placeholder='Should I go to the Party tonight?' maxLength="150"  id='createposttextfield' onChange={this.handleChange.bind(this)}></textarea><br></br>
+
                             {this.renderUnauthorized()}
                             <ImageUploader sendFileToParent={this.recieveFile.bind(this)} />
                             <button id='createbutton' className="btn btn-primary" type="button" onClick={this.handleSubmit.bind(this)}>Posten</button>
