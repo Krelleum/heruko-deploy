@@ -24,7 +24,7 @@ class ButtonNo extends Component {
         })
             .then(response => {
                 if (response.status === 200) {
-                    
+
                 }
             })
             .catch(error => {
@@ -34,6 +34,35 @@ class ButtonNo extends Component {
 
 // CHANGES THE VIEW STATE OF BUTTONS IN PARENTS COMPONENT
         this.props.handleStateByChild()
+
+// SECOND AXIOS CALL IN ORDER TO PATCH VOTEDPOSTS ARRAY IN USER OBJECT IN DB
+
+        let updateBody = {
+                    votedPost: this.props.id
+                }
+
+                let userId = JSON.parse(localStorage.getItem('userId'))
+
+                axios({
+                    method: 'patch',
+                    url: '/user/patchuservoted/' + userId,
+                    data: updateBody,
+                    headers:
+                        {
+                            'Content-Type': 'application/json',
+                            'Authorization': sessionStorage.getItem('userkey'),
+                        }
+                })
+                    .then(function (response) {
+                        console.log('UPDATED VOTED BY');
+                    })
+                    .catch(function (error) {
+                        console.log(error, 'Unable to Update VOTEDPOSTS IN USER MODEL IN DB')
+                    })
+
+
+
+
 
     }
 
