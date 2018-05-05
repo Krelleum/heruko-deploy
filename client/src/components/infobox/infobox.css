@@ -2,10 +2,10 @@
 
 .infoboxloggedout{
     background: #FF3366;
-    width: 290px;
+    max-height: 60px;
     margin-left: -10px;
     color: white;
-    padding: 15px;
+    padding: 5px;
     border-radius: 5px;
 }
 
@@ -29,7 +29,7 @@
     background: var(--greengradient);
     border-radius: 50%;
     margin-right: 5px;
-    
+
 }
 .infoboxname{
     padding-top: 2px;

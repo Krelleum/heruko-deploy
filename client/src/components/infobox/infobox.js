@@ -13,7 +13,7 @@ class InfoBox extends Component{
 
 renderBox(){
     const userName = sessionStorage.getItem('useremail');
-    
+
     if(userName){
         return (
          <div className='infoboxloggedin'>
@@ -24,7 +24,7 @@ renderBox(){
             <div className='infoboxname'>
                 <p>Eingeloggt als {userName} </p>
             </div>
-         </div>   
+         </div>
         )
     }else{
         return(
@@ -40,11 +40,11 @@ renderBox(){
 
 
     render(){
-        
+
         return(
-            <div className='infobox'>
+            <div className='infobox col-md-12'>
                 {this.renderBox()}
-                
+
             </div>
         )
     }

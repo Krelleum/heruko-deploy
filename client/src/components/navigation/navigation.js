@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './navigation.css';
 // import SignUp from '../signup/signup';
-import InfoBox from '../infobox/infobox';
+
 
 class Navbar extends Component {
     constructor(props) {
@@ -99,7 +99,7 @@ class Navbar extends Component {
     render() {
 
         let existingToken = sessionStorage.getItem('userkey');
-        
+
 
         return (
 
@@ -113,9 +113,7 @@ class Navbar extends Component {
                     {this.renderButtons()}
 
                 </div>
-                <div className="nav-infobox" >
-                    <InfoBox />
-                </div>
+                
             </nav>
 
         );

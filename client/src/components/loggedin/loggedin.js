@@ -8,15 +8,16 @@ import SearchField from '../search/searchfield';
 import ShowPost from '../showdcide/showpost';
 import VotedPostsContainer from '../votedposts/votedpostscontainer';
 import axios from 'axios';
+import InfoBox from '../infobox/infobox';
 
 class LoggedIn extends Component{
     constructor(props){
         super(props);
         this.state = {
             show: 'feed',
-            
+
             data:[],
-            
+
         }
     }
 
@@ -25,20 +26,20 @@ class LoggedIn extends Component{
 searchForPost(input){
     let search = input;
 
-    
+
         axios({
             method: 'get',
             url: '/createpost/search/' + search,
         })
         .then(response => {
             this.setState({data: response.data});
-            
+
         })
         .catch(error => {
             console.log(error);
         })
-    
-   
+
+
 }
 
 
@@ -49,7 +50,7 @@ searchForPost(input){
 toRender(){
 
     const data = this.state.data;
-    
+
 
     if(this.state.show === 'feed'){
         return (
@@ -57,19 +58,19 @@ toRender(){
                 <SearchField toggleSearch={this.handleStateSearch.bind(this)} inputToParent={this.handleSearchInput.bind(this)}/>
                 <CreatePost updateParent={this.toggleUpdater.bind(this)} />
                 <ShowPostContainer />
-            </div> 
+            </div>
         )
     }else if(this.state.show === 'profile'){
         return (
             <div>
-               <Profile/> 
+               <Profile/>
             </div>
         )
     }else if(this.state.show === 'userposts'){
         return(
             <div>
                 <UserPosts/>
-            </div>    
+            </div>
         )
     }
 
@@ -82,11 +83,11 @@ toRender(){
     }
 
     else if(this.state.show === 'search'){
-        
-        
+
+
         if(data.length === 0){
             return (
-                
+
             <div className='container'>
             <SearchField toggleSearch={this.handleStateSearch.bind(this)} inputToParent={this.handleSearchInput.bind(this)}/>
                 <p id='noresult'>Keine Ergebnisse</p>
@@ -94,14 +95,14 @@ toRender(){
             </div>
                 )
         }
-        
-        
-        
+
+
+
         return(
             <div className='container'>
                 <SearchField toggleSearch={this.handleStateSearch.bind(this)} inputToParent={this.handleSearchInput.bind(this)}/>
                 {data.map((obj, index)=>
-                    
+
                     <ShowPost
                         key={index}
                         post={obj.post}
@@ -111,8 +112,8 @@ toRender(){
                         author={obj.author}
                         path={obj.imagePath}
                     />
-                
-                
+
+
                 )}
             </div>
         )
@@ -149,9 +150,9 @@ toggleUpdater(){
 
 // Gets Input value from SearchField in SearchField.js and sets the Components state equal to the Input!
 handleSearchInput(input){
-    
+
     this.searchForPost(input);
-   
+
 }
 
 
@@ -159,11 +160,12 @@ handleSearchInput(input){
 render(){
     return(
         <div>
-            <NavBar 
+            <InfoBox />
+            <NavBar
             toggleLoggedOut={this.props.toggleLoggedOut}
             toggleProfile={this.handleStateProfile.bind(this)}
             toggleFeed={this.handleStateFeed.bind(this)}
-            toggleUserPost={this.handleStateUserPosts.bind(this)} 
+            toggleUserPost={this.handleStateUserPosts.bind(this)}
             toggleVotedPost={this.handleStateVotedPosts.bind(this)} />
             {this.toRender()}
         </div>
