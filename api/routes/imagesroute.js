@@ -17,7 +17,7 @@ const Image = require('../models/images');
 // MULTER CONFIGURATION
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
-        cb(null, './tmp/')
+        cb(null, '/tmp/')
     },
     filename: function(req, file, cb){
         cb(null, file.originalname)
@@ -40,7 +40,7 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
         .max()
         .jpeg({quality: 90})
         .toBuffer(function (err, buffer) {
-            fs.writeFile('./tmp/' + req.file.originalname, buffer, function(err){})
+            fs.writeFile('/tmp/' + req.file.originalname, buffer, function(err){})
             // output.jpg is a 300 pixels wide and 200 pixels high image
             // containing a scaled and cropped version of input.jpg
         })

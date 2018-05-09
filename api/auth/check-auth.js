@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
     
     
     try{
-        const decoded = jwt.verify(req.headers.authorization, 'TheMongoExpress');
+        const decoded = jwt.verify(req.headers.authorization, process.env.Tokenkey);
         res.status(200);
         console.log('AUTHORIZATION SUCCESFULL!')
         next();

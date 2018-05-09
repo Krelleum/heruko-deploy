@@ -221,7 +221,7 @@ router.post('/signin', (req, res, next) => {
 
                     res.status(200).json({
                         message: 'Valid SignIn !',
-                        token: jwt.sign({ email: user.email, userId: user._id }, 'TheMongoExpress', { expiresIn: "1h" }),
+                        token: jwt.sign({ email: user.email, userId: user._id }, process.env.Tokenkey, { expiresIn: "1h" }),
                         userId: user._id,
                         email: user.email
                     })
@@ -287,7 +287,7 @@ router.post('/verify', (req, res, next) => {
 
     var token = req.body.token;
 
-    jwt.verify(token, 'TheMongoExpress', function (err, token) {
+    jwt.verify(token, process.env.Tokenkey, function (err, token) {
 
         if (err) {
             res.status(401).json({ error: err })
