@@ -47,7 +47,8 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
                 res.status(500).json({ error: err });
             }
             else{
-                res.status(201).json({result})
+                res.status(201).json({result});
+                console.log(result);
             }
             
         });

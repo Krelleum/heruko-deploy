@@ -13,7 +13,7 @@ class ShowImage extends Component{
     render(){
         
         
-        let path = 'https://testfeedbck.herokuapp.com' + this.props.path;
+        let path = 'https://res.cloudinary.com/dosbv6hkq' + this.props.path;
 
         return(
             <div className='col-md-12 showimage'>
