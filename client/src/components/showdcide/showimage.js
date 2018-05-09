@@ -17,7 +17,7 @@ class ShowImage extends Component{
 
         return(
             <div className='col-md-12 showimage'>
-                <img src={this.path} alt='posted by User'></img>
+                <img src= {path} alt='posted by User'></img>
             </div>
         )
     }
