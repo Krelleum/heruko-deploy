@@ -41,7 +41,7 @@ const upload = multer({storage: storage});
 
 router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
     
-    let url;
+   
 
     cloudinary.v2.uploader.upload(req.file.path, function (error, result) { 
             if(error){
@@ -50,7 +50,7 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
             else{
                 res.status(201).json({result});
                 console.log(result);
-                url = result.url
+                
             }
             
         });
@@ -60,7 +60,7 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
 
     const createImage = new Image({
         _id: new mongoose.Types.ObjectId(),
-        image: url,
+        image: result.url,
 
     });
 
