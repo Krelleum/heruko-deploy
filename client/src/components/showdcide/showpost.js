@@ -105,7 +105,7 @@ class ShowPost extends Component {
     }
 
     renderImage() {
-
+        console.log('showpostpath:' + this.props.path)
         if (this.props.path && this.props.path !== 'noImage') {
             return <ShowImage path={this.props.path} />
         }
