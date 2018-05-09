@@ -14,7 +14,7 @@ class ShowImage extends Component{
         
         
         let path = this.props.path;
-
+        console.log(path);
         return(
             <div className='col-md-12 showimage'>
                 <img src= {path} alt='posted by User'></img>
