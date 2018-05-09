@@ -49,36 +49,36 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
             }
             else{
                 res.status(201).json({result});
-                console.log(result);
                 
-            }
+                const createImage = new Image({
+                    _id: new mongoose.Types.ObjectId(),
+                    image: result.url,
+
+                });
+
+
+                createImage.save()
+
+
+
+                    .then(result => {
+                        res.status(201).json({
+                            result: result,
+                            message: 'Image Created'
+                        })
+
+                    })
+                    .catch(err => {
+                        res.status(500).json({ error: err });
+                    })
+             }
             
         });
 
 
 
 
-    const createImage = new Image({
-        _id: new mongoose.Types.ObjectId(),
-        image: result.url,
-
-    });
-
-
-createImage.save()
-
-
-
-    .then(result => {
-        res.status(201).json({
-            result: result,
-            message: 'Image Created'
-        })
-
-    })
-    .catch(err => {
-        res.status(500).json({error: err});
-    })
+    
 })
 
 // **************************************************************************
