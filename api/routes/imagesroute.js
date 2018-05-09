@@ -45,10 +45,10 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
 
     cloudinary.v2.uploader.upload(req.file.path, function (error, data) { 
             if(error){
-                res.status(500).json({ error: error });
+                console.log(error)
             }
             else{
-                res.status(201).json({data});
+                
                 // CREATES NEW IMAGE IN DATABASE WITH MONGO DB ID AND IMAGE URL FROM CLOUDINARY
                 const createImage = new Image({
                     _id: new mongoose.Types.ObjectId(),
