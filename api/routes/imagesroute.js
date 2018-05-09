@@ -12,7 +12,14 @@ const checkAuth = require('../auth/check-auth');
 // MODEL IMPORT
 const Image = require('../models/images');
 
+// Cloudinary
+const cloudinary = require('cloudinary');
 
+cloudinary.config({
+    cloud_name: process.env.cloud_name,
+    api_key: process.env.cloud_key,
+    api_secret: process.env.cloud_secret,
+})
 
 // MULTER CONFIGURATION
 const storage = multer.diskStorage({
@@ -35,15 +42,15 @@ const upload = multer({storage: storage});
 router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
 
 
-    sharp(req.file.path)
-        .resize(300)
-        .max()
-        .jpeg({quality: 90})
-        .toBuffer(function (err, buffer) {
-            fs.writeFile('/tmp/' + req.file.originalname, buffer, function(err){})
-            // output.jpg is a 300 pixels wide and 200 pixels high image
-            // containing a scaled and cropped version of input.jpg
-        })
+    cloudinary.v2.uploader.upload(req.file.path, function (error, result) { 
+            if(err){
+                res.status(500).json({ error: err });
+            }
+            else{
+                res.status(201).json({result})
+            }
+            
+        });
 
 
 
