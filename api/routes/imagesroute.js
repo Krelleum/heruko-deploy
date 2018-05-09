@@ -49,7 +49,7 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
             }
             else{
                 res.status(201).json({result});
-                
+                // CREATES NEW IMAGE IN DATABASE WITH MONGO DB ID AND IMAGE URL FROM CLOUDINARY
                 const createImage = new Image({
                     _id: new mongoose.Types.ObjectId(),
                     image: result.url,
