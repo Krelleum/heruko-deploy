@@ -88,7 +88,7 @@ class CreatePost extends Component {
                         var body = {
                             post: this.state.post,
                             author: email,
-                            imagePath: result.data.result.image,
+                            imagePath: result.url,
                             imageId: result.data.result._id,
                         }
 
