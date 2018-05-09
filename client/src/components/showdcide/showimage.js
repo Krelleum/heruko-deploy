@@ -11,9 +11,13 @@ class ShowImage extends Component{
 
 
     render(){
+        
+        
+        let path = 'https://testfeedbck.herokuapp.com' + this.props.path;
+
         return(
             <div className='col-md-12 showimage'>
-                <img src={this.props.path} alt='posted by User'></img>
+                <img src={this.path} alt='posted by User'></img>
             </div>
         )
     }
