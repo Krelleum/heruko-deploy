@@ -46,6 +46,7 @@ router.get('/:userId', checkAuth, (req, res, next) => {
                         votedPosts: user.votedPosts,
                         userId: user._id,
                         email: user.email,
+                        userName: user.userName,
                     }
                 );
 
@@ -150,7 +151,7 @@ router.post('/signup', (req, res, next) => {
 
     // Check is user Exists with User.findOne() Method
 
-    User.findOne({ email: req.body.email })
+    User.findOne({ email: req.body.email, userName: req.body.userName })
         .exec()
         .then(user => {
             if (user) {
@@ -171,7 +172,8 @@ router.post('/signup', (req, res, next) => {
                         const NewUser = new User({
                             _id: new mongoose.Types.ObjectId(),
                             email: req.body.email,
-                            password: hash
+                            password: hash,
+                            userName: req.body.userName
                         });
 
                         NewUser.save()
@@ -223,7 +225,8 @@ router.post('/signin', (req, res, next) => {
                         message: 'Valid SignIn !',
                         token: jwt.sign({ email: user.email, userId: user._id }, process.env.Tokenkey, { expiresIn: "1h" }),
                         userId: user._id,
-                        email: user.email
+                        email: user.email,
+                        userName: user.userName,
                     })
 
                 }

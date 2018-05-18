@@ -6,7 +6,7 @@ const newUserSchema = mongoose.Schema({
     password: {type: String, required: true},
     createdPosts: {type: Array},
     votedPosts: {type: Array},
-    
+    userName:{type: String, required: true},
 });
 
 module.exports = mongoose.model('User', newUserSchema);

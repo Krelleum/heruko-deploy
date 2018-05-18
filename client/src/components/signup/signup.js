@@ -29,7 +29,8 @@ handleChange(e){
 handleSubmit(){
     var body = {
         email: this.state.signupemail,
-        password: this.state.signuppassword
+        password: this.state.signuppassword,
+        userName: this.state.signupusername,
     }
 
     axios({
@@ -64,7 +65,7 @@ render(){
 
             <div className='signup'>
             <form>
-                    
+                    <input className='signinput' id='signupusername' placeholder='Username' onChange={this.handleChange.bind(this)} ></input>    
                 <input className='signinput' id='signupemail' placeholder='Email' onChange={this.handleChange.bind(this)} ></input>
                     <input className='signinput' id='signuppassword' type='password' placeholder='Passwort' onChange={this.handleChange.bind(this)}></input>
                     <div className='signplaceholder'><p>{this.state.status}</p></div>

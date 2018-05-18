@@ -105,7 +105,7 @@ deletePost(postToDelete, imagePath, imageId){
     // This is an axios DELETE Request with a Body. If there are any Problems with
     // deleting an Image change Data to be send in the header. 
     // ********************************************************************************
-    if(imageId && imagePath){
+    if(imagePath){
     let deletebody = {
         imageId: imageId,
         imagePath: imagePath,
