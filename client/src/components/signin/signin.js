@@ -54,6 +54,7 @@ handleClick(){
         
         sessionStorage.setItem('userkey', response.data.token)
         sessionStorage.setItem('useremail', response.data.email)
+        sessionStorage.setItem('username', response.data.userName)
         localStorage.setItem('userId', JSON.stringify(response.data.userId))
         
         this.setState({

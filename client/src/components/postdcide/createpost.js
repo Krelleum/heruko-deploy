@@ -84,10 +84,12 @@ class CreatePost extends Component {
                 .then(result => {
                         console.log(result);
                         const email = sessionStorage.getItem('useremail')
+                        const userName= sessionStorage.getItem('username');
                         //  SENDS ACTUAL POST TO THE DATABASE
                         var body = {
                             post: this.state.post,
                             author: email,
+                            authorusername: userName,
                             imagePath: result.data.result.image,
                             imageId: result.data.result._id,
                         }
@@ -128,10 +130,12 @@ class CreatePost extends Component {
         else {
 
             const email = sessionStorage.getItem('useremail')
+            const userName= sessionStorage.getItem('username')
             //  SENDS ACTUAL POST TO THE DATABASE
             var body = {
                 post: this.state.post,
                 author: email,
+                authorusername: userName,
                 imagePath: '',
             }
 

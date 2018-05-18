@@ -11,6 +11,7 @@ const createPostSchema = mongoose.Schema({
     votedNo:{ type: Array },
     time: { type: Date, default: Date.now },
     author: {type: String},
+    authorusername: {type: String},
     imagePath:{type: String},
     imageId: {type: String}
 });
