@@ -98,7 +98,7 @@ renderOnScroll(offset){
         console.log(this.state.data);
         return (
                  
-        <div className='container'>
+        <div className='container showpostcontainer'>
         
            {torender.map((obj, index) => 
                     
