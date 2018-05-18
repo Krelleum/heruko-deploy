@@ -109,6 +109,7 @@ renderOnScroll(offset){
                     votedBy = {obj.votedBy}
                     time= {obj.time}
                     author= {obj.author}
+                    authorusername= {obj.authorusername}
                     path={obj.imagePath}
                     />
                    

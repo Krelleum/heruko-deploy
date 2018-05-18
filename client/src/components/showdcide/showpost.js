@@ -125,7 +125,7 @@ class ShowPost extends Component {
                 <div className='actualpostheader'>
                     <div className='postheaderleft'>
 
-                        <p>@{this.props.author}</p>
+                        <p>@{this.props.authorusername ? this.props.authorusername : this.props.author}</p>
                     </div>
 
                     <div className='postheaderright'>
