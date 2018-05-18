@@ -26,6 +26,7 @@ router.post('/', checkAuth, (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         post: req.body.post,
         author: req.body.author,
+        authorusername: req.body.authorusername,
         imagePath: req.body.imagePath,
         imageId: req.body.imageId,
         
@@ -84,6 +85,7 @@ router.get('/', (req, res, next) => {
                         votedBy: resultdata.votedBy,
                         time: resultdata.time,
                         author: resultdata.author,
+                        authorusername: resultdata.authorusername,
                         imagePath: resultdata.imagePath,
                         imageId: resultdata.imageId,
                     }
@@ -125,6 +127,7 @@ router.get('/offset/:offset', (req, res, next) => {
                         votedBy: resultdata.votedBy,
                         time: resultdata.time,
                         author: resultdata.author,
+                        authorusername: resultdata.authorusername,
                         imagePath: resultdata.imagePath,
                         imageId: resultdata.imageId,
 
