@@ -46,7 +46,7 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
     cloudinary.v2.uploader.upload(req.file.path, 
         // transforms image with eager
         {eager: 
-            [{ height: 400, crop: "fill", quality: 30}]
+            { height: 400, crop: "fill", quality: 30}
         }, 
 
 
