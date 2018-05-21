@@ -43,10 +43,18 @@ router.post('/', checkAuth, upload.single('file'),(req, res, next) =>{
     
    
 
-    cloudinary.v2.uploader.upload(req.file.path, function (error, data) { 
+    cloudinary.v2.uploader.upload(req.file.path, 
+        // transforms image with eager
+        {eager: 
+            [{ height: 400, crop: "fill"}]
+        }, 
+
+
+            function (error, data) { 
             if(error){
                 console.log(error)
             }
+
             else{
                 
                 // CREATES NEW IMAGE IN DATABASE WITH MONGO DB ID AND IMAGE URL FROM CLOUDINARY
