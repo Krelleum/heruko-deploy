@@ -7,15 +7,15 @@
 }
 
 .userpost{
-    background: white;
-   
+    background: var(--bluegradient);
+   color: white;
     margin-top: 20px;
     min-height: 250px;
     display: inline-block;
     padding: 0px;
     padding-bottom:0px;
     overflow: hidden;
-    
+    box-shadow: var(--shadow1);
     
     
     font-family: roboto;
@@ -72,8 +72,8 @@
     float:left;
     overflow: scroll;
     
-    border-bottom: 1px solid rgba(0,0,0, 0.05);
-    font-weight: 600;
+    /* border-bottom: 1px solid rgba(0,0,0, 0.05); */
+    font-weight: 400;
     text-align: center;
     
     padding: 15px;
@@ -97,7 +97,8 @@
 .userpostright{
     display: inline-block;
     max-height: 100px;
-    padding-top: 20px;
+    
+    margin-top: 0px;
     
     
 }
@@ -105,7 +106,7 @@
 
 .userpostposres{
     display: inline-block;
-    color: green;
+    color: var(--greengradient);
     width: 50px;
     font-weight: 600;
     font-size: 1.6rem;
@@ -113,7 +114,7 @@
 .userpostnegres{
     display: inline-block;
     margin-left: 50px;
-    color: red;
+    color: var(--redgradient);
     width: 50px;
     font-weight: 600;
     font-size: 1.6rem;
@@ -121,11 +122,12 @@
 
 .userpostright button {
     border:none;
-    border:1px solid var(--primaryred);
+    border:1px solid white;
     color:var(--primaryred);
-    background:white ;
-    border-radius: 5px;
-    padding: 5px;
+    background: transparent;
+    color: white;
+    font-size: 0.8rem;
+    padding: 3px;
     padding-left: 10px;
     padding-right: 10px;
     
