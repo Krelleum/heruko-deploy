@@ -99,7 +99,9 @@ render(){
             </form>
              
             </div>
-
+            <div className='cookiewrapper'>
+                <p>Our website uses cookies to help provide you with the best experience we can. Cookies are small text files that are placed on your computer or mobile phone when you browse websites</p>
+            </div>
          </div>
 
     )

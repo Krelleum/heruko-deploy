@@ -112,3 +112,12 @@
 .signplaceholder{
     height: 25px;
 }
+
+.cookiewrapper{
+    background: lightgrey;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin-top: 300px;
+    padding: 20px;
+}
