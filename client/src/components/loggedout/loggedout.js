@@ -67,7 +67,7 @@ render(){
                         <p>Sign Up</p>
                     </div>
                         <div className='loggoutbuttonsignin' onClick={this.changeSignIn.bind(this)}>
-                        <p>Sign In</p>
+                        <p>Login</p>
                     </div>
                 </div>
                 {this.toRender()}

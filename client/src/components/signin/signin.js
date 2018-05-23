@@ -87,14 +87,19 @@ render(){
         <div className='signinwrapper col-md-12'>
             
             <div className='signinheading'>
-            <p>Einloggen</p>
+            <p>Login</p>
             </div>     
             
             <div className='signin'>
             <form >
                 <input className='signinput' id='signinemail' placeholder='Email' onChange={this.handleChange.bind(this)} ></input>
-                <input className='signinput' id='signinpassword' type='password' placeholder='Passwort' onChange={this.handleChange.bind(this)}></input> 
+                <input className='signinput' id='signinpassword' type='password' placeholder='Password' onChange={this.handleChange.bind(this)}></input> 
                 <div className='signplaceholder'><p>{this.state.status}</p></div>
+
+                <div className='forgotten'>
+                        <a>Password lost?</a>
+                </div>
+
                 <button onClick={this.handleClick.bind(this)} className='signinputbtn' type='button' >Login</button>
             </form>
              
