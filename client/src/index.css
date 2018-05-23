@@ -9,7 +9,7 @@
   --bordergradient: linear-gradient(to left, #ff4e50, #f9d423);
   --greengradient: #16DB93;
   --redgradient:#EE6352;
-  
+
   --oldgreengradient: linear-gradient(to right, #56ab2f, #a8e063);
   --oldredgradient:linear-gradient(to right, #eb3349, #f45c43);
 
@@ -47,6 +47,10 @@ body, html {
   font-family: Tajawal;
   /* background: var(--backgroundgradient); */
   background: var(--bluegradient);
-  background-size: contain;
+  background-image: url('http://res.cloudinary.com/dosbv6hkq/image/upload/v1527085005/feedbackbackground.jpg');
+  background-size: fill;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
   min-height: 1000px;
 }

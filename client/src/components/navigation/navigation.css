@@ -1,5 +1,5 @@
 .navbar{
-  background:var(--bluegradient) !important;
+  background:transparent !important;
   color: white !important;
   height: 50px;
   z-index: 99;
@@ -7,10 +7,17 @@
 }
 
 .navbar-nav{
-  background: var(--bluegradient);
+  background: transparent;
   padding-bottom: 20px;
   margin-top: 15px;
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-nav {
+        background: var(--bluegradient);
+        border-radius: 5px;
+    }
 }
 .navbar a{
   color: white;
