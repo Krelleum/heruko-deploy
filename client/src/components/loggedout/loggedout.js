@@ -47,7 +47,7 @@ toRender(){
 render(){
     return(
         <div>
-            <div className='container'>
+            <div className='container loggedoutcontainer'>
             <div className='col-md-10 loggedoutwrapper'>
             <div className='col-md-7 loggedoutheading'>
                 <h3>FEEDBCK</h3>

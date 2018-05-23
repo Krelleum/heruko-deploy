@@ -1,3 +1,7 @@
+.loggedoutcontainer{
+    padding: 0px;
+}
+
 
 .loggedoutwrapper{
     box-shadow: var(--shadow1);
@@ -8,13 +12,18 @@
     height: 700px;
 }
 
+@media only screen and (max-width: 600px) {
+    .loggedoutwrapper {
+        margin-top: 0px
+    }
+}
 
 .loggedoutheading {
     float: left;
     height: 700px;
     background-image: url('http://res.cloudinary.com/dosbv6hkq/image/upload/v1527078458/action-aktion-club-341858.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     
     
 }
@@ -57,7 +66,7 @@
 
 .loggoutbuttonsignin{
     display: inline-block;
-    background: var(--primaryred);
+    background: var(--highlight);
     width: 50%;
     
     padding-top: 10px;
@@ -71,7 +80,7 @@
     display: block;
     /* box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23); */
     color: black;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--highlight);
     background: white;
     font-weight: 500;
     font-size: 1rem;
@@ -93,7 +102,7 @@
     width: 150px;
     
     border: none;
-    background: var(--primaryred);
+    background: var(--highlight);
     color: white;
     
     border-radius: 5px;
