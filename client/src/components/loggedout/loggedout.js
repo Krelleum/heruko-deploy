@@ -48,6 +48,7 @@ render(){
     return(
         <div>
             <div className='container'>
+            <div className='col-md-12 loggedoutwrapper'>
             <div className='col-md-6 loggedoutheading'>
                 <h3>FEEDBCK</h3>
                 <p>Crowd-Based-Decisionmaking</p>
@@ -60,7 +61,7 @@ render(){
 
 
 
-            <div className='col-md-8 loggedout'>
+            <div className='loggedout'>
                 <div className='loggedoutbuttons'>
                     <div className='loggoutbuttonsignup' onClick={this.changeSignUp.bind(this)}>
                         <p>Sign Up</p>
@@ -76,7 +77,7 @@ render(){
 
             </div>
                 </div>
-
+                </div>
         </div>
         </div>
     )
