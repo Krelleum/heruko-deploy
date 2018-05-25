@@ -1,4 +1,6 @@
-
+.infobox{
+    padding: 0px;
+}
 
 .infoboxloggedout{
     background: #FF3366;
@@ -6,7 +8,7 @@
     margin-left: -10px;
     color: white;
     padding: 5px;
-    border-radius: 5px;
+    
 }
 
 .infoboxloggedout span{
@@ -16,7 +18,7 @@
 
 .infoboxloggedin{
     background: white;
-    border-radius: 5px;
+    
     padding-left: 10px;
     padding-right: 10px;
     height: 30px;
