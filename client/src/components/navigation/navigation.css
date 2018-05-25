@@ -7,21 +7,21 @@
 }
 
 .navbar-nav{
-  background: transparent;
-  padding-bottom: 20px;
-  margin-top: 15px;
+  background:transparent;
+  
   width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     .navbar-nav {
-        background: var(--bluegradient);
+        background: var(--highlight);
         border-radius: 5px;
     }
 }
 .navbar a{
   color: white;
   font-family: roboto;
+
   
 }
 .navbar-brand{
@@ -33,16 +33,38 @@
 }
 
 .nav-item{
-  height: 30px;
+  height: 40px;
   padding-left: 20px;
   padding-right: 20px;
+
+  border-radius: 5px;
 }
 .nav-item:hover{
- background: rgba(255,255,255, 0.8);
+ background:var(--highlight);
  color: white !important;
 
  
 }
+
+@media only screen and (max-width: 600px) {
+    .nav-item:hover{
+ background:white;
+ color: var(--highlight) !important;
+  }
+
+  .nav-item{
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+    border-bottom: 1px solid rgba(0,0,0, 0.15);
+    border-radius: 0px;
+  
+
+}
+
+}
+
+
 
 .nav-infobox{
   float: right;
