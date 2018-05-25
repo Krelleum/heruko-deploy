@@ -105,7 +105,7 @@ class Navbar extends Component {
 
             <nav className="navbar navbar-expand-lg  bg-light">
 
-                <a className="navbar-brand" >FEEDBCK</a>
+                <a className="navbar-brand" >Feedbck</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"><i className="material-icons">menu</i></span>
                 </button>

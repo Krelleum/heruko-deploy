@@ -25,7 +25,8 @@
   
 }
 .navbar-brand{
-  font-family: Permanent Marker !important;
+  font-family: Lobster !important;
+  font-size: 2rem;
 }
 
 .navbar-toggler-icon{
@@ -36,7 +37,8 @@
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-
+  min-width: 70px;
+  margin-top: 10px;
   border-radius: 5px;
 }
 .nav-item:hover{
@@ -54,9 +56,10 @@
 
   .nav-item{
   height: 40px;
+  margin-top: 0px;
   padding-left: 20px;
   padding-right: 20px;
-    border-bottom: 1px solid rgba(0,0,0, 0.15);
+    border-bottom: 1px solid rgba(255,255,255, 0.15);
     border-radius: 0px;
   
 
