@@ -9,7 +9,7 @@ class AppContainer extends Component{
     constructor(props){
         super(props);
         this.state = {
-            show: 'loggedin'
+            show: 'loggedout'
         }
     }
 
