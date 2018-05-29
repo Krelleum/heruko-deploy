@@ -50,7 +50,7 @@ render(){
             <div className='container loggedoutcontainer'>
             <div className='col-md-10 loggedoutwrapper'>
             <div className='col-md-7 loggedoutheading'>
-                <h3>FEEDBCK</h3>
+                <h3>Feedbck</h3>
                 <p>Crowd-Based-Decisionmaking</p>
                 <p>Got a Decision to make? - The Crowd will help you to decide. Create an Account today and enjoy Crowd-Based-Decisionmaking on FEEDBCK</p>  
             </div>
