@@ -51,6 +51,9 @@ body, html {
   background-size: fill;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */    
   min-height: 1000px;
 }
